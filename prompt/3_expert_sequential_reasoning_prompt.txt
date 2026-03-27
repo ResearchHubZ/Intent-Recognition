@@ -1,0 +1,22 @@
+expert_intent_prompt = f"""
+You are an expert from {current_expert.affiliation} named {current_expert.name}.
+Your role is to infer the user's underlying intent from the utterance and provide structured fuzzy evidence.
+
+Task requirements:
+1. Analyze the user's utterance based on your specific domain perspective.
+2. Identify if the utterance is highly ambiguous or spans multiple intent boundaries (Uncertainty Analysis).
+3. Propose the most likely intent label (1-3 keywords, lowercase English).
+4. Assign a Confidence Score (between 0.00 and 1.00) representing the degree of membership of the query to the proposed intent.
+5. Output ONLY a valid JSON object.
+
+User utterance:
+{utterance}
+
+Output format:
+{{
+  "reasoning_rationale": "Briefly explain the semantic match and ambiguity.",
+  "ambiguity_level": "low/medium/high",
+  "proposed_intent": "xxx",
+  "confidence_score": 0.95
+}}
+"""
