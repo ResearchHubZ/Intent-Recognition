@@ -30,17 +30,15 @@ By combining the semantic reasoning power of LLMs with the mathematical formulat
 
 ## 📂 Repository Structure
 
-### 1. `prompts/`
+### 1. `prompt/`
 Contains the exact prompt templates used for driving the multi-agent system:
 - `1_intent_initialization_prompt.txt`: Generates abstract intent prototypes based on K-Means++ clusters.
 - `2_expert_agent_generation_prompt.txt`: Dynamically generates expert agent profiles (domain, role, specific analytical recommendations).
 - `3_expert_sequential_reasoning_prompt.txt`: Instructs experts to generate structured fuzzy evidence (`confidence_score`, `ambiguity_level`).
 - `4_decision_maker_aggregation_prompt.txt`: Instructs the decision-making agent to perform confidence-weighted aggregation.
 
-### 2. `configs/`
+### 2. `config/`
 Contains the core hyperparameters used in our experiments:
 - `sam_lir_config.yaml`: Explicitly maps the experimental parameters to the paper's mathematical formulation (e.g., Sigmoid slope $\alpha$, Gaussian diffusion $\sigma$, and the rejection threshold $\eta$). *Note: Parameters under `fuzzy_inference` correspond to the formal fuzzy inference layer in the manuscript; `system_parameters` are implementation-level settings used in the reported experiments.*
 
-### 3. `data_sample/`
-- `help_dataset_sanitized_sample.json`: A representative, de-identified subset of the private "Help" dataset. All Personal Identifiable Information (PII) has been removed or masked to demonstrate the data structure and our privacy-preserving mechanisms.
 
