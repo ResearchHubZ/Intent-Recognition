@@ -36,7 +36,6 @@ Contains the exact prompt templates used for driving the multi-agent system:
 - `2_expert_agent_generation_prompt.txt`: Dynamically generates expert agent profiles (domain, role, specific analytical recommendations).
 - `3_expert_sequential_reasoning_prompt.txt`: Instructs experts to generate structured fuzzy evidence (`confidence_score`, `ambiguity_level`).
 - `4_decision_maker_aggregation_prompt.txt`: Instructs the decision-making agent to perform confidence-weighted aggregation.
-- `5_baseline_long_prompt_CoT.txt`: The deep Chain-of-Thought (CoT) prompt used for the **B+S (Long-Prompt)** equal-budget controlled baseline.
 
 ### 2. `configs/`
 Contains the core hyperparameters used in our experiments:
